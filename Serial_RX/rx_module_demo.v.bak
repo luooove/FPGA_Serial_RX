@@ -1,0 +1,43 @@
+module rx_module_demo
+(
+	CLK,RSTn,
+	RX_Pin_In,
+	Number_Data
+);
+input CLK;
+input RSTn;
+input RX_Pin_In;
+output [3:0] Number_Data;
+/********************************/
+
+wire RX_Done_Sig;
+wire [7:0] RX_Data;
+
+rx_module U1
+(
+	.CLK(CLK),
+	.RSTn(RSTn),
+	.RX_Pin_In(RX_Pin_In),
+	.RX_Done_Sig(RX_Done_Sig),
+	.RX_Data(RX_Data)
+);
+
+
+/********************************/
+
+wire RX_En_Sig;
+wire [7:0] Output_Data;
+
+control_module U2
+(
+	.CLK(CLK),
+	.RSTn(RSTn),
+	.RX_Done_Sig(RX_Done_Sig),
+	.RX_Data(RX_Data),
+	.RX_En_Sig(RX_En_Sig),
+	.Number_Data(Output_Data)
+);
+
+assign Number_Data = Output_Data[3:0];
+
+endmodule

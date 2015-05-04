@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 04 22:06:42 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : rx_module_demo
+Top-level Entity Name : rx_module_demo
+Family : Cyclone II
+Total logic elements : 52
+    Total combinational functions : 47
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 7
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
